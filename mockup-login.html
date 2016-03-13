@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+      <form class="form-signin">
+	  <!-- gender select-->
+        <div class="form-group">
+        <label for="inputEmail" >I am a:</label>
+        <!--dropdown-->
+		 <select id="genderDropDownList" class="form-control">
+		  <option value="">Gender and preference</option>
+          <option>male</option>
+          <option>female</option>
+        </select> 
+		</div>
+		
+		<!--birthday dropdown list form-->
+		<div class="form-group">
+        <label for="inputEmail" >Birthday:</label>
+		<div class="row">
+        <div class="col-xs-3 col-md-3"><select id="birthdayMonthList" class="form-control">
+		  <option value="">Month</option>
+          <option>Jan</option>
+          <option>Feb</option>
+        </select>
+		</div>
+        <div class="col-xs-2 col-md-2"><select id="birthdayDayList" class="form-control">
+		  <option value="">Day</option>
+          <option>1</option>
+          <option>2</option>
+        </select></div>
+		 <div class="col-xs-2 col-md-2"><select id="birthdayYearList" class="form-control">
+		  <option value="">Year</option>
+          <option>2016</option>
+          <option>2017</option>
+        </select></div>
+        </div>
+		</div>
+		<!--end of birthday dropdown list form-->
+		
+		<!--username and password form-->
+		<div class="form-group">
+        <label for="inputEmail">Email address:</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		</div>
+		<div class="form-group">
+        <label for="inputPassword">Password:</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		</div>
+		<!--username and password form-->
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up*</button>
+		<div class="form-group">
+		 <br>
+		 <p class="text-center">Already a member?  <a href="https://www.google.ca/">Login</a>.</p>
+      </form>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
