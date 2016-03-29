@@ -1,52 +1,165 @@
 <!DOCTYPE html>
+<!-- https://www.zoosk.com/-->
+<!--159.203.28.37:8080-->
+<!--http://www.computerhope.com/htmcolor.htm-->
 <html lang="en">
 <head>
-  <title>Bootstrap Case</title>
+  <title>Eadate Login</title>
   <meta charset="utf-8">
   <meta name="viewport"content="width=device-width, initial-scale=1">
-  <link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet"href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <link href="bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet" type="text/css"/>
+  <link href="font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script-->
+  <!--link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"-->
+<style>
+label {
+    color: #333;
+    display: block;
+    font-size: 0.85714em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0.5em;
+}
+
+/* navbar */
+.navbar-custom {
+    background-color: #ADDFFF;
+}
+
+#dropDownGender{
+    width:100%;
+}
+#groupCalendar{
+    width:100%;
+}
+
+
+</style>
+
 </head>
 <body>
 
+<nav class="navbar navbar-default navbar-custom" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img alt="Brand" width="200" height="40" src="images/loginHeaderLogo.png">
+    </div>
+  </div>
+</nav>
 <div class="container">
-
+    <div class ="row">
+            <div class = "col-lg-9 fixed">
+			 <img alt="Brand" src="images/loginPic.png">
+			</div> <!-- end of col-lg-9-->
+    <!--form class="form-horizontal" role="form">
+	 <div class="form-group">
+        <a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/">
+              <span class="fa fa-facebook"></span> Sign up*
+        </a>
+		
+		<a class="btn btn-block btn-social btn-google"  href="https://accounts.google.com/login">
+              <span class="fa fa-google"></span> Sign up*
+        </a>
+		</div>
+	 </form-->
+	 <div class = "col-lg-3 fixed">
       <form class="form-signin">
+	        <div class="row">
+              <div class="col-xs-6 col-md-6"><a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/">
+              <span class="fa fa-facebook"></span> Sign up*
+              </a>
+		      </div>
+              <div class="col-xs-6 col-md-6"><a class="btn btn-block btn-social btn-google"  href="https://accounts.google.com/login">
+              <span class="fa fa-google"></span> Sign up*
+              </a>
+			  </div>
+            </div>
+	   </form>
 	  <!-- gender select-->
         <div class="form-group">
         <label for="inputEmail" >I am a:</label>
         <!--dropdown-->
-		 <select id="genderDropDownList" class="form-control">
-		  <option value="">Gender and preference</option>
-          <option>male</option>
-          <option>female</option>
-        </select> 
-		</div>
-		
-		<!--birthday dropdown list form-->
-		<div class="form-group">
-        <label for="inputEmail" >Birthday:</label>
-		<div class="row">
-        <div class="col-xs-3 col-md-3"><select id="birthdayMonthList" class="form-control">
-		  <option value="">Month</option>
-          <option>Jan</option>
-          <option>Feb</option>
-        </select>
-		</div>
-        <div class="col-xs-2 col-md-2"><select id="birthdayDayList" class="form-control">
-		  <option value="">Day</option>
-          <option>1</option>
-          <option>2</option>
-        </select></div>
-		 <div class="col-xs-2 col-md-2"><select id="birthdayYearList" class="form-control">
-		  <option value="">Year</option>
-          <option>2016</option>
-          <option>2017</option>
-        </select></div>
+		 <div class="dropdown">
+         <button id="dropDownGender" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Gender and preference
+         <span class="caret"></span>
+		 </button>
+             <ul class="dropdown-menu">
+              <li><a href="#">Man interested in woman</a></li>
+              <li><a href="#">Woman interested in man</a></li>
+			  <li><a href="#">Man interested in man</a></li>
+              <li><a href="#">Woman interested in woman</a></li>
+             </ul>
+        </div> 
         </div>
+		 <!--birthday dropdown list form-->
+<div class="form-group">
+	<label for="inputEmail" >Birthday:</label>
+	<form id="groupCalendar" role="form">
+	 <div class ="row">
+	  <div class="col-xs-4 col-md-4">
+		<div class="form-group">
+			<div class="dropdown">
+				<button id="dropDownMonth" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Month
+					<span class="caret"/>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">January</a>
+					</li>
+					<li>
+						<a href="#">February</a>
+					</li>
+				</ul>
+			</div>
+			<!-- end drop down list-->
 		</div>
-		<!--end of birthday dropdown list form-->
+		</div>
+		<!-- end form group-->
+		<div class="col-xs-4 col-md-4">
+		<div class="form-group">
+			<div class="dropdown">
+				<button id="dropDownDay" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Day
+					<span class="caret"/>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+				</ul>
+			</div>
+			<!-- end drop down list-->
+		</div>
+		</div>
+		<div class="col-xs-4 col-md-4">
+		<!-- end form group-->
+		<div class="form-group">
+			<div class="dropdown">
+				<button id="dropDownYear" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Year
+					<span class="caret"/>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">2016</a>
+					</li>
+					<li>
+						<a href="#">2015</a>
+					</li>
+					<li>
+						<a href="#">2014</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		</div> <!-- end of row-->
+	</form>
+</div>
+<!--end of birthday dropdown list form-->
 		
 		<!--username and password form-->
 		<div class="form-group">
@@ -63,13 +176,21 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up*</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Browse Now*</button>
 		<div class="form-group">
 		 <br>
 		 <p class="text-center">Already a member?  <a href="https://www.google.ca/">Login</a>.</p>
-      </form>
-
+      <!--/form-->
+       </div>
+	   </div> <!-- end of col-lg-3-->
+	    </div> <!-- end of row-->
     </div> <!-- /container -->
-
+         <!--bottom bar -->
+	      <div class = "navbar navbar-default navbar-custom navbar-fixed-bottom">
+         <!--tutorial video 3-->
+         <div class = "container">
+         </div>
+      </div>
+	  <!--bottom bar -->
 </body>
 </html>
